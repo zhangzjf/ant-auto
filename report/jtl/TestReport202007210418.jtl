@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="46657" it="0" lt="0" ct="0" ts="1595319529961" s="false" lb="登录加密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; String key1=&quot;2b9c9365c1fc9828&quot;; String iv1=&quot;46c1be2f92 . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="APP-米袋出行 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+
+<sample t="2762" it="0" lt="0" ct="0" ts="1595319588084" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="1198" it="0" lt="1197" ct="829" ts="1595319591141" s="true" lb="登录请求" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="1750" sby="515" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="78" it="0" lt="0" ct="0" ts="1595319592347" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="10" it="0" lt="0" ct="0" ts="1595319592428" s="true" lb="司机接单操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="0" ts="1595319592440" s="true" lb="司机接单操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="708" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/acceptOrder</java.net.URL>
+</httpSample>
+<sample t="12" it="0" lt="0" ct="0" ts="1595319592518" s="true" lb="司机接单操作响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319592531" s="true" lb="忽略订单操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="58" it="0" lt="58" ct="0" ts="1595319592539" s="true" lb="忽略接单操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="881" sby="708" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/ignoreOrder</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319592598" s="true" lb="忽略接单操作响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319592605" s="true" lb="上线听单/结束听单操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="81" it="0" lt="80" ct="0" ts="1595319592611" s="true" lb="上线听单/结束听单操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="857" sby="778" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/setUpOnlineStatus</java.net.URL>
+</httpSample>
+<sample t="9" it="0" lt="0" ct="0" ts="1595319592693" s="true" lb="上线听单/结束听单响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319592702" s="true" lb="我已就位操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="72" it="0" lt="72" ct="0" ts="1595319592711" s="true" lb="我已就位操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="667" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/inPlace</java.net.URL>
+</httpSample>
+<sample t="9" it="0" lt="0" ct="0" ts="1595319592784" s="true" lb="我已就位响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="12" it="0" lt="0" ct="0" ts="1595319592795" s="true" lb="开始服务操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="75" it="0" lt="75" ct="0" ts="1595319592808" s="true" lb="开始服务操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="691" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/serving</java.net.URL>
+</httpSample>
+<sample t="41" it="0" lt="0" ct="0" ts="1595319592886" s="true" lb="开始服务响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319592927" s="true" lb="到达还车地点操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="59" it="0" lt="59" ct="0" ts="1595319592931" s="true" lb="到达还车地点操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="673" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/inReturnPlace</java.net.URL>
+</httpSample>
+<sample t="12" it="0" lt="0" ct="0" ts="1595319592990" s="true" lb="到达还车地点响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593003" s="true" lb="完成服务操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="59" it="0" lt="59" ct="0" ts="1595319593007" s="true" lb="完成服务操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="733" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/complete</java.net.URL>
+</httpSample>
+<sample t="16" it="0" lt="0" ct="0" ts="1595319593067" s="true" lb="完成服务响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="11" it="0" lt="0" ct="0" ts="1595319593084" s="true" lb="确认费用操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="67" it="0" lt="67" ct="0" ts="1595319593096" s="true" lb="确认费用操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="674" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/charge/confirm</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593164" s="true" lb="确认费用响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319593168" s="true" lb="费用明细操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="81" it="0" lt="81" ct="0" ts="1595319593173" s="true" lb="费用明细操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="729" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/chargeDetail</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319593256" s="true" lb="费用明细响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593263" s="true" lb="个人中心-基础月工作数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="88" it="0" lt="88" ct="49" ts="1595319593268" s="true" lb="个人中心-基础月工作数据" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="608" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/info/month</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319593357" s="false" lb="个人中心-基础月工作数据-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="13" it="0" lt="0" ct="0" ts="1595319593362" s="true" lb="个人中心-订单条件请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="102" it="0" lt="102" ct="0" ts="1595319593376" s="true" lb="个人中心-订单条件" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="11783" sby="810" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/list</java.net.URL>
+</httpSample>
+<sample t="30" it="0" lt="0" ct="0" ts="1595319593480" s="true" lb="个人中心-订单条件-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="10" it="0" lt="0" ct="0" ts="1595319593511" s="true" lb="个人中心-作业规范查询数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="54" it="0" lt="54" ct="0" ts="1595319593523" s="true" lb="个人中心-作业规范查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="1099" sby="818" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/specification/list</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319593577" s="false" lb="个人中心作业规范-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;In file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; Encountered &quot;:&quot; at line 5, column 29.&#xd;&#xa;" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319593581" s="true" lb="订单状态检查数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="48" it="0" lt="48" ct="0" ts="1595319593586" s="true" lb="订单状态检查查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="857" sby="733" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/checkOrderStatus</java.net.URL>
+</httpSample>
+<sample t="13" it="0" lt="0" ct="0" ts="1595319593644" s="true" lb="订单状态检查-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593657" s="true" lb="代接订单列表数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="56" it="0" lt="56" ct="0" ts="1595319593661" s="true" lb="代接订单列表数据查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="881" sby="821" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/waitAcceptOrders</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319593719" s="true" lb="代接订单列表数据-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319593725" s="true" lb="待处理订单列表数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="81" it="0" lt="81" ct="0" ts="1595319593727" s="true" lb="待处理订单列表查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="3058" sby="821" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/waitHandleOrders</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319593809" s="true" lb="待处理订单-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319593812" s="true" lb="首部信息请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="33" it="0" lt="33" ct="0" ts="1595319593819" s="true" lb="首部信息查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="618" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/getTopData</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319593853" s="false" lb="首部信息-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593860" s="true" lb="订单详情请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="37" it="0" lt="37" ct="0" ts="1595319593870" s="true" lb="订单详情查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="622" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/getOrderInfo</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593908" s="false" lb="订单详情-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="14" it="0" lt="0" ct="0" ts="1595319593911" s="true" lb="司机车辆信息录入请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="50" it="0" lt="50" ct="0" ts="1595319593925" s="true" lb="司机车辆信息录入查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="857" sby="913" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/confirm/saveVehicleInfo</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319593975" s="true" lb="司机车辆录入查询-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319593978" s="true" lb="核券请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="60" it="0" lt="59" ct="0" ts="1595319593981" s="true" lb="核券检查查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="757" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/coupon/writeOff</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319594042" s="true" lb="核券-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319594045" s="false" lb="提交上传请求加密" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;In file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; Encountered &quot;:&quot; at line 5, column 70.&#xd;&#xa;" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="30" it="0" lt="30" ct="0" ts="1595319594049" s="true" lb="提交上传查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="619" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/picture/upload</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319594079" s="false" lb="提交上传-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319594082" s="true" lb="查询服务列表请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="39" it="0" lt="39" ct="0" ts="1595319594086" s="true" lb="查询服务列表查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="8883" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/service/item/list</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319594127" s="false" lb="查询服务列表-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319594130" s="true" lb="预计费用请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="270" it="0" lt="270" ct="0" ts="1595319594135" s="true" lb="预计费用查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="945" sby="679" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/charge/estimateCost</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319594406" s="true" lb="预计费用查询-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+
+<httpSample t="9502" it="0" lt="9501" ct="9474" ts="1595319607931" s="true" lb="HTTP请求" rc="200" rm="" tn="线程组 1-1" dt="text" by="388" sby="162" ng="1" na="1">
+  <java.net.URL>https://www.ratjin.com/rat/user/login?phone=15736928516&amp;code=123456</java.net.URL>
+</httpSample>
+
+<sample t="983" it="0" lt="0" ct="0" ts="1595319625467" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="1012" it="0" lt="1012" ct="684" ts="1595319626616" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1902" sby="493" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="174" it="0" lt="0" ct="0" ts="1595319627636" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="9" it="0" lt="0" ct="0" ts="1595319627811" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="618" it="0" lt="618" ct="0" ts="1595319627823" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319628442" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319628450" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="357" it="0" lt="357" ct="50" ts="1595319628458" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="20" it="0" lt="0" ct="0" ts="1595319628817" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319628838" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="43" it="0" lt="43" ct="0" ts="1595319628842" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319628886" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="37" it="0" lt="0" ct="0" ts="1595319628892" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="400" it="0" lt="400" ct="81" ts="1595319628930" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="12" it="0" lt="0" ct="0" ts="1595319629331" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319629346" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="48" it="0" lt="48" ct="0" ts="1595319629351" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319629402" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319629406" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="352" it="0" lt="352" ct="34" ts="1595319629419" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="18" it="0" lt="0" ct="0" ts="1595319629772" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319629791" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="67" it="0" lt="66" ct="0" ts="1595319629794" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319629863" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319629866" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="369" it="0" lt="369" ct="53" ts="1595319629872" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="12" it="0" lt="0" ct="0" ts="1595319630243" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319630256" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="45" it="0" lt="45" ct="0" ts="1595319630258" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="19" it="0" lt="0" ct="0" ts="1595319630305" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319630325" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="363" it="0" lt="363" ct="63" ts="1595319630329" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="15" it="0" lt="0" ct="0" ts="1595319630694" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319630711" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="69" it="0" lt="68" ct="0" ts="1595319630713" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319630782" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319630785" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="337" it="0" lt="337" ct="35" ts="1595319630789" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319631127" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319631131" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="449" it="0" lt="449" ct="0" ts="1595319631137" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319631587" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319631590" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="428" it="0" lt="427" ct="122" ts="1595319631594" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="8" it="0" lt="0" ct="0" ts="1595319632022" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319632032" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="40" it="0" lt="40" ct="0" ts="1595319632035" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319632077" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319632080" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="321" it="0" lt="321" ct="28" ts="1595319632088" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="39" it="0" lt="0" ct="0" ts="1595319632411" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319632451" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="71" it="0" lt="70" ct="0" ts="1595319632453" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319632527" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319632530" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="418" it="0" lt="418" ct="116" ts="1595319632534" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="13" it="0" lt="0" ct="0" ts="1595319632953" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319632968" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="43" it="0" lt="43" ct="0" ts="1595319632970" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319633013" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319633015" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="342" it="0" lt="342" ct="37" ts="1595319633020" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="14" it="0" lt="0" ct="0" ts="1595319633363" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319633379" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="50" it="0" lt="50" ct="0" ts="1595319633382" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="25" it="0" lt="0" ct="0" ts="1595319633433" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="12" it="0" lt="0" ct="0" ts="1595319633458" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="344" it="0" lt="344" ct="36" ts="1595319633471" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319633815" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="11" it="0" lt="0" ct="0" ts="1595319633819" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="47" it="0" lt="47" ct="0" ts="1595319633831" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319633878" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319633880" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="339" it="0" lt="339" ct="30" ts="1595319633884" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319634224" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="16" it="0" lt="0" ct="0" ts="1595319634228" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="699" it="0" lt="699" ct="0" ts="1595319634245" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319634944" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319634946" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="364" it="0" lt="364" ct="61" ts="1595319634948" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="37" it="0" lt="0" ct="0" ts="1595319635313" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319635350" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="39" it="0" lt="39" ct="0" ts="1595319635352" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319635392" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319635393" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="349" it="0" lt="349" ct="39" ts="1595319635396" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319635746" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319635752" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="42" it="0" lt="41" ct="0" ts="1595319635754" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="9" it="0" lt="0" ct="0" ts="1595319635796" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319635805" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="317" it="0" lt="317" ct="34" ts="1595319635809" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="25" it="0" lt="0" ct="0" ts="1595319636128" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319636154" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="58" it="0" lt="58" ct="0" ts="1595319636157" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319636216" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="11" it="0" lt="0" ct="0" ts="1595319636224" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="367" it="0" lt="367" ct="50" ts="1595319636236" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319636604" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319636608" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="61" it="0" lt="61" ct="0" ts="1595319636611" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319636673" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319636675" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="373" it="0" lt="373" ct="41" ts="1595319636680" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="16" it="0" lt="0" ct="0" ts="1595319637054" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319637071" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="73" it="0" lt="73" ct="0" ts="1595319637072" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319637153" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319637156" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="404" it="0" lt="404" ct="81" ts="1595319637160" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="16" it="0" lt="0" ct="0" ts="1595319637566" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319637582" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="473" it="0" lt="473" ct="0" ts="1595319637583" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319638056" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319638058" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="336" it="0" lt="336" ct="33" ts="1595319638059" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319638396" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319638399" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="48" it="0" lt="48" ct="0" ts="1595319638404" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319638452" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319638454" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="377" it="0" lt="376" ct="58" ts="1595319638459" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319638836" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319638843" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="46" it="0" lt="46" ct="0" ts="1595319638846" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319638894" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319638897" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="777" it="0" lt="777" ct="36" ts="1595319638901" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319639684" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319639688" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="45" it="0" lt="45" ct="0" ts="1595319639691" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319639737" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319639738" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="342" it="0" lt="342" ct="44" ts="1595319639740" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319640082" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319640085" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="47" it="0" lt="47" ct="0" ts="1595319640089" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319640137" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319640140" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="1150" it="0" lt="1150" ct="853" ts="1595319640145" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319641296" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319641301" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="654" it="0" lt="654" ct="0" ts="1595319641305" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1595319641959" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319641964" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="334" it="0" lt="334" ct="34" ts="1595319641965" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="17" it="0" lt="0" ct="0" ts="1595319642300" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319642318" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="56" it="0" lt="56" ct="0" ts="1595319642322" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319642378" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319642379" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="358" it="0" lt="358" ct="37" ts="1595319642381" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319642740" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="8" it="0" lt="0" ct="0" ts="1595319642744" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="52" it="0" lt="52" ct="0" ts="1595319642752" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319642804" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319642809" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="392" it="0" lt="392" ct="32" ts="1595319642811" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319643203" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319643207" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="53" it="0" lt="53" ct="0" ts="1595319643208" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319643262" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319643264" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="428" it="0" lt="428" ct="46" ts="1595319643266" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="31" it="0" lt="0" ct="0" ts="1595319643695" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319643728" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="57" it="0" lt="57" ct="0" ts="1595319643730" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319643788" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319643789" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="362" it="0" lt="362" ct="33" ts="1595319643790" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319644159" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319644166" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="42" it="0" lt="42" ct="0" ts="1595319644168" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319644211" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319644212" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="339" it="0" lt="339" ct="33" ts="1595319644214" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319644554" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319644557" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="712" it="0" lt="712" ct="0" ts="1595319644558" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319645270" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319645272" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="350" it="0" lt="350" ct="36" ts="1595319645275" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="6" it="0" lt="0" ct="0" ts="1595319645625" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319645632" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="50" it="0" lt="50" ct="0" ts="1595319645633" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="61" it="0" lt="0" ct="0" ts="1595319645683" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319645744" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="337" it="0" lt="337" ct="40" ts="1595319645746" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="16" it="0" lt="0" ct="0" ts="1595319646091" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319646107" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="56" it="0" lt="56" ct="0" ts="1595319646109" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319646167" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319646174" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="1259" it="0" lt="1259" ct="29" ts="1595319646180" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319647440" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319647442" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="44" it="0" lt="44" ct="0" ts="1595319647444" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319647489" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319647490" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="1705" it="0" lt="1705" ct="741" ts="1595319647494" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319649199" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319649201" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="524" it="0" lt="524" ct="0" ts="1595319649202" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319649727" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319649729" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="396" it="0" lt="395" ct="48" ts="1595319649731" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319650127" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319650129" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="42" it="0" lt="42" ct="0" ts="1595319650129" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319650172" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="34" it="0" lt="0" ct="0" ts="1595319650173" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="380" it="0" lt="380" ct="84" ts="1595319650208" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319650589" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319650591" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="57" it="0" lt="57" ct="0" ts="1595319650592" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319650649" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319650650" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="350" it="0" lt="350" ct="42" ts="1595319650652" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319651010" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319651026" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="47" it="0" lt="46" ct="0" ts="1595319651027" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319651074" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319651075" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="327" it="0" lt="327" ct="30" ts="1595319651076" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319651403" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319651405" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="44" it="0" lt="44" ct="0" ts="1595319651408" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319651452" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319651458" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="339" it="0" lt="339" ct="40" ts="1595319651460" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="37" it="0" lt="0" ct="0" ts="1595319651800" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319651838" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="462" it="0" lt="462" ct="0" ts="1595319651840" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="9" it="0" lt="0" ct="0" ts="1595319652302" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319652312" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="336" it="0" lt="336" ct="32" ts="1595319652313" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319652649" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319652653" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="665" it="0" lt="665" ct="0" ts="1595319652655" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319653320" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319653322" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="525" it="0" lt="525" ct="31" ts="1595319653326" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="8" it="0" lt="0" ct="0" ts="1595319653852" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319653861" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="46" it="0" lt="46" ct="0" ts="1595319653862" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319653909" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319653911" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="339" it="0" lt="339" ct="35" ts="1595319653914" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319654254" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319654256" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="55" it="0" lt="55" ct="0" ts="1595319654258" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="22" it="0" lt="0" ct="0" ts="1595319654314" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319654336" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="336" it="0" lt="336" ct="36" ts="1595319654339" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="18" it="0" lt="0" ct="0" ts="1595319654677" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1595319654705" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="52" it="0" lt="51" ct="0" ts="1595319654724" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319654777" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319654778" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="347" it="0" lt="346" ct="46" ts="1595319654779" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="8" it="0" lt="0" ct="0" ts="1595319655126" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319655136" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="45" it="0" lt="44" ct="0" ts="1595319655160" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319655205" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319655206" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="333" it="0" lt="333" ct="30" ts="1595319655208" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="14" it="0" lt="0" ct="0" ts="1595319655542" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319655557" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="44" it="0" lt="44" ct="0" ts="1595319655558" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319655602" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319655604" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="426" it="0" lt="426" ct="41" ts="1595319655606" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="11" it="0" lt="0" ct="0" ts="1595319656033" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319656044" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="721" it="0" lt="721" ct="0" ts="1595319656056" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319656787" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319656788" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="345" it="0" lt="344" ct="47" ts="1595319656790" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1595319657135" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1595319657143" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="61" it="0" lt="61" ct="0" ts="1595319657147" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319657208" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319657209" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="335" it="0" lt="335" ct="31" ts="1595319657210" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319657546" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319657547" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="48" it="0" lt="48" ct="0" ts="1595319657549" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1595319657599" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319657603" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="368" it="0" lt="368" ct="64" ts="1595319657605" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319657977" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="33" it="0" lt="0" ct="0" ts="1595319657980" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="40" it="0" lt="40" ct="0" ts="1595319658013" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="20" it="0" lt="0" ct="0" ts="1595319658053" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319658073" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="449" it="0" lt="449" ct="118" ts="1595319658074" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="1842" sby="820" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1595319658523" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1595319658525" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="42" it="0" lt="42" ct="0" ts="1595319658526" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="617" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="8" it="0" lt="0" ct="0" ts="1595319658568" s="true" lb="豪车订单下单响应解密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+
+</testResults>

@@ -1,0 +1,1874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="米袋出行2.0司机端服务接口权限测试" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">X-ClientType</stringProp>
+              <stringProp name="Header.value">DRIVER</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Authorization</stringProp>
+              <stringProp name="Header.value">bearer ${token}</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP请求默认值" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">phantom-stg.golddishtech.com</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie管理器" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        </CookieManager>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="driverdeviceid" elementType="Argument">
+              <stringProp name="Argument.name">driverdeviceid</stringProp>
+              <stringProp name="Argument.value">04cdb40690cd36f7757986198c1daa24c999</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">司机Android设备ID</stringProp>
+            </elementProp>
+            <elementProp name="driveraccount" elementType="Argument">
+              <stringProp name="Argument.name">driveraccount</stringProp>
+              <stringProp name="Argument.value">N202003121079</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+              <stringProp name="Argument.desc">小凤姐姐司机账户</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">10000</stringProp>
+        </LoopController>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="登录加密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+String SigninContent=&quot;{\&quot;deviceId\&quot;:\&quot;05a8c855b488ab1678ed1f5e85d077c57b4f\&quot;,\&quot;os\&quot;:\&quot;ANDROID\&quot;,\&quot;userName\&quot;:\&quot;15736928516\&quot;,\&quot;appVersion\&quot;:\&quot;3\&quot;,\&quot;osVersion\&quot;:\&quot;9\&quot;,\&quot;channel\&quot;:\&quot;司机后台管理\&quot;,\&quot;passWord\&quot;:\&quot;midai123\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String SigninEncrypt=AESUtil.encrypt(SigninContent,key1,iv1);
+vars.put(&quot;SigninEncrypt&quot;,SigninEncrypt);
+log.info(&quot;SigninEncrypt=&quot;+SigninEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登录请求" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${SigninEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/open/signin</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取登录响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">SigninMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String SigninContent2=&quot;${SigninMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String SigninDecrypt=AESUtil.decrypt(SigninContent2,key1,iv1);
+
+Pattern pattern = Pattern.compile(&quot;\&quot;token\&quot;:\&quot;(.*?)\&quot;&quot;);
+        Matcher matcher = pattern.matcher(SigninDecrypt);
+        if (matcher.find()) {
+           log.info(matcher.group(1));
+        }
+String token=matcher.group(1);
+        
+vars.put(&quot;SigninContent2&quot;,SigninContent2);
+vars.put(&quot;SigninDecrypt&quot;,SigninDecrypt);
+vars.put(&quot;token&quot;,token);
+log.info(&quot;SigninContent2=&quot;+SigninContent2);
+log.info(&quot;SigninDecrypt=&quot;+SigninDecrypt);
+log.info(&quot;token=&quot;+token);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="设置token为全局变量-BeanShell PostProcessor" enabled="true">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">token</stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">${__setProperty(${token},,)}</stringProp>
+            <stringProp name="TestPlan.comments">设置token为全局变量</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取token" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">request_headers</stringProp>
+            <stringProp name="RegexExtractor.refname">token1</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;token&quot;:&quot;(.*?)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="司机接单操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String acceptOrderContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000003231\&quot;,\&quot;userAccount\&quot;:\&quot;N202003121079\&quot;,\&quot;remark\&quot;:\&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String acceptOrderEncrypt=AESUtil.encrypt(acceptOrderContent,key1,iv1);
+vars.put(&quot;acceptOrderEncrypt&quot;,acceptOrderEncrypt);
+log.info(&quot;acceptOrderEncrypt=&quot;+acceptOrderEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="司机接单操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${acceptOrderEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/acceptOrder</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取接单响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">acceptOrderMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="司机接单操作响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String acceptOrderContent=&quot;${acceptOrderMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String acceptOrderDecrypt=AESUtil.decrypt(acceptOrderContent,key1,iv1);
+vars.put(&quot;acceptOrderContent&quot;,acceptOrderContent);
+vars.put(&quot;acceptOrderDecrypt&quot;,acceptOrderDecrypt);
+log.info(&quot;acceptOrderContent=&quot;+acceptOrderContent);
+log.info(&quot;acceptOrderDecrypt=&quot;+acceptOrderDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="忽略订单操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String ignoreOrderContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200320000000068\&quot;,\&quot;userAccount\&quot;:\&quot;N202003121079\&quot;,\&quot;remark\&quot;:\&quot;12\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String ignoreOrderEncrypt=AESUtil.encrypt(ignoreOrderContent,key1,iv1);
+vars.put(&quot;ignoreOrderEncrypt&quot;,ignoreOrderEncrypt);
+log.info(&quot;ignoreOrderEncrypt=&quot;+ignoreOrderEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="忽略接单操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${ignoreOrderEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/ignoreOrder</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="获取接单响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">ignoreOrderMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="忽略接单操作响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String ignoreOrderContent=&quot;${ignoreOrderMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String ignoreOrderDecrypt=AESUtil.decrypt(ignoreOrderContent,key1,iv1);
+vars.put(&quot;ignoreOrderContent&quot;,ignoreOrderContent);
+vars.put(&quot;ignoreOrderDecrypt&quot;,ignoreOrderDecrypt);
+log.info(&quot;ignoreOrderContent=&quot;+ignoreOrderContent);
+log.info(&quot;ignoreOrderDecrypt=&quot;+ignoreOrderDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="上线听单/结束听单操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String setUpOnlineStatusContent=&quot;{\&quot;deviceId\&quot;:\&quot;073c9d3ecf3da3766489ef55c6353557fe76\&quot;,\&quot;loginIp\&quot;:\&quot;192.168.10.164\&quot;,\&quot;online\&quot;:\&quot;ON\&quot;,\&quot;userAccount\&quot;:\&quot;N202003231133\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String setUpOnlineStatusEncrypt=AESUtil.encrypt(setUpOnlineStatusContent,key1,iv1);
+vars.put(&quot;setUpOnlineStatusEncrypt&quot;,setUpOnlineStatusEncrypt);
+log.info(&quot;setUpOnlineStatusEncrypt=&quot;+setUpOnlineStatusEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="上线听单/结束听单操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${setUpOnlineStatusEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/setUpOnlineStatus</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="上线听单/结束听单响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">setUpOnlineStatusMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="上线听单/结束听单响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String setUpOnlineStatusContent=&quot;${setUpOnlineStatusMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String setUpOnlineStatusDecrypt=AESUtil.decrypt(setUpOnlineStatusContent,key1,iv1);
+vars.put(&quot;setUpOnlineStatusContent&quot;,setUpOnlineStatusContent);
+vars.put(&quot;setUpOnlineStatusDecrypt&quot;,setUpOnlineStatusDecrypt);
+log.info(&quot;setUpOnlineStatusContent=&quot;+setUpOnlineStatusContent);
+log.info(&quot;setUpOnlineStatusDecrypt=&quot;+setUpOnlineStatusDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="我已就位操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String inPlaceContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000004387\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String inPlaceEncrypt=AESUtil.encrypt(inPlaceContent,key1,iv1);
+vars.put(&quot;inPlaceEncrypt&quot;,inPlaceEncrypt);
+log.info(&quot;inPlaceEncrypt=&quot;+inPlaceEncrypt);</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="我已就位操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${inPlaceEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/status/inPlace</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="我已就位响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">inPlaceMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="我已就位响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String inPlaceContent=&quot;${inPlaceMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String inPlaceDecrypt=AESUtil.decrypt(inPlaceContent,key1,iv1);
+vars.put(&quot;inPlaceContent&quot;,inPlaceContent);
+vars.put(&quot;inPlaceDecrypt&quot;,inPlaceDecrypt);
+log.info(&quot;inPlaceContent=&quot;+inPlaceContent);
+log.info(&quot;inPlaceDecrypt=&quot;+inPlaceDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="开始服务操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String servingContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000004594\&quot;,\&quot;serviceId\&quot;:\&quot;2\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String servingEncrypt=AESUtil.encrypt(servingContent,key1,iv1);
+vars.put(&quot;servingEncrypt&quot;,servingEncrypt);
+log.info(&quot;servingEncrypt=&quot;+servingEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="开始服务操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${servingEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/status/serving</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="我已就位响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">servingMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="开始服务响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String servingContent=&quot;${servingMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String servingDecrypt=AESUtil.decrypt(servingContent,key1,iv1);
+vars.put(&quot;servingContent&quot;,servingContent);
+vars.put(&quot;servingDecrypt&quot;,servingDecrypt);
+log.info(&quot;servingContent=&quot;+servingContent);
+log.info(&quot;servingDecrypt=&quot;+servingDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="到达还车地点操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String inReturnPlaceContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000004594\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String inReturnPlaceEncrypt=AESUtil.encrypt(inReturnPlaceContent,key1,iv1);
+vars.put(&quot;inReturnPlaceEncrypt&quot;,inReturnPlaceEncrypt);
+log.info(&quot;inReturnPlaceEncrypt=&quot;+inReturnPlaceEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="到达还车地点操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${inReturnPlaceEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/status/inReturnPlace</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="我已就位响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">inReturnPlaceMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="到达还车地点响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String inReturnPlaceContent=&quot;${inReturnPlaceMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String inReturnPlaceDecrypt=AESUtil.decrypt(inReturnPlaceContent,key1,iv1);
+vars.put(&quot;inReturnPlaceContent&quot;,inReturnPlaceContent);
+vars.put(&quot;inReturnPlaceDecrypt&quot;,inReturnPlaceDecrypt);
+log.info(&quot;inReturnPlaceContent=&quot;+inReturnPlaceContent);
+log.info(&quot;inReturnPlaceDecrypt=&quot;+inReturnPlaceDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="完成服务操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String completeContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000004594\&quot;,\&quot;bridgeFee\&quot;:\&quot;\&quot;,\&quot;crossingFee\&quot;:\&quot;\&quot;,\&quot;otherFee\&quot;:\&quot;\&quot;,\&quot;otherFee\&quot;:\&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String completeEncrypt=AESUtil.encrypt(completeContent,key1,iv1);
+vars.put(&quot;completeEncrypt&quot;,completeEncrypt);
+log.info(&quot;completeEncrypt=&quot;+completeEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="完成服务操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${completeEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/status/complete</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="完成服务响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">completeMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="完成服务响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String completeContent=&quot;${completeMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String completeDecrypt=AESUtil.decrypt(completeContent,key1,iv1);
+vars.put(&quot;completeContent&quot;,completeContent);
+vars.put(&quot;completeDecrypt&quot;,completeDecrypt);
+log.info(&quot;completeContent=&quot;+completeContent);
+log.info(&quot;completeDecrypt=&quot;+completeDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="确认费用操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String confirmContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000004594\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String confirmEncrypt=AESUtil.encrypt(confirmContent,key1,iv1);
+vars.put(&quot;confirmEncrypt&quot;,confirmEncrypt);
+log.info(&quot;confirmEncrypt=&quot;+confirmEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="确认费用操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${confirmEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/status/charge/confirm</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="完成服务响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">confirmMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="确认费用响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String confirmContent=&quot;${confirmMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String confirmDecrypt=AESUtil.decrypt(confirmContent,key1,iv1);
+vars.put(&quot;confirmContent&quot;,confirmContent);
+vars.put(&quot;confirmDecrypt&quot;,confirmDecrypt);
+log.info(&quot;confirmContent=&quot;+confirmContent);
+log.info(&quot;confirmDecrypt=&quot;+confirmDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="费用明细操作-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String chargeDetailContent=&quot;{\&quot;agentStatus\&quot;: \&quot;\&quot;,\&quot;orderId\&quot;: \&quot;MD20200707000000081\&quot;,	\&quot;orderType\&quot;: \&quot;CAR_LIFE\&quot;,\&quot;userAccount\&quot;: \&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String chargeDetailEncrypt=AESUtil.encrypt(chargeDetailContent,key1,iv1);
+vars.put(&quot;chargeDetailEncrypt&quot;,chargeDetailEncrypt);
+log.info(&quot;chargeDetailEncrypt=&quot;+chargeDetailEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="费用明细操作" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${chargeDetailEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/chargeDetail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="费用明细响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">chargeDetailMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="费用明细响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String chargeDetailContent=&quot;${chargeDetailMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String chargeDetailDecrypt=AESUtil.decrypt(chargeDetailContent,key1,iv1);
+vars.put(&quot;chargeDetailContent&quot;,chargeDetailContent);
+vars.put(&quot;chargeDetailDecrypt&quot;,chargeDetailDecrypt);
+log.info(&quot;chargeDetailContent=&quot;+chargeDetailContent);
+log.info(&quot;chargeDetailDecrypt=&quot;+chargeDetailDecrypt);</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="个人中心-基础月工作数据请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+String monthContent=&quot;{\&quot;name\&quot;: \&quot;\&quot;,\&quot;userAccount\&quot;: \&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String monthEncrypt=AESUtil.encrypt(monthContent,key1,iv1);
+vars.put(&quot;monthEncrypt&quot;,monthEncrypt);
+log.info(&quot;monthEncrypt=&quot;+monthEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="个人中心-基础月工作数据" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${monthDecrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/info/month</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="个人中心-基础月工作数据-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">monthMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="个人中心-基础月工作数据-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String monthContent=&quot;${monthMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String monthDecrypt=AESUtil.decrypt(monthContent,key1,iv1);
+vars.put(&quot;monthContent&quot;,monthContent);
+vars.put(&quot;monthDecrypt&quot;,monthDecrypt);
+log.info(&quot;monthContent=&quot;+monthContent);
+log.info(&quot;monthDecrypt=&quot;+monthDecrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="个人中心-订单条件请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String listContent=&quot;{\&quot;agentStatus\&quot;: \&quot;\&quot;,\&quot;appointmentTimeEnd\&quot;: \&quot;\&quot;,\&quot;appointmentTimeStar\&quot;: \&quot;\&quot;,\&quot;current\&quot;: 0,\&quot;orderId\&quot;: [],\&quot;orderType\&quot;: \&quot;\&quot;,\&quot;pageSize\&quot;: 0,\&quot;userAccount\&quot;: \&quot;N202003231133\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String listEncrypt=AESUtil.encrypt(listContent,key1,iv1);
+vars.put(&quot;listEncrypt&quot;,listEncrypt);
+log.info(&quot;listEncrypt=&quot;+listEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="个人中心-订单条件" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${listEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/list</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="个人中心-基础月工作数据-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">listMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="个人中心-订单条件-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+String listContent=&quot;${listMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String listDecrypt=AESUtil.decrypt(listContent,key1,iv1);
+vars.put(&quot;listContent&quot;,listContent);
+vars.put(&quot;listDecrypt&quot;,listDecrypt);
+log.info(&quot;listContent=&quot;+listContent);
+log.info(&quot;listDecrypt=&quot;+listDecrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="个人中心-作业规范查询数据请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String confirmContent=&quot;{}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String confirmEncrypt=AESUtil.encrypt(confirmContent,key1,iv1);
+vars.put(&quot;confirmEncrypt&quot;,confirmEncrypt);
+log.info(&quot;confirmEncrypt=&quot;+confirmEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="个人中心-作业规范查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${listEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/specification/list</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="个人中心-作业规范-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">listMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="个人中心作业规范-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String confirmContent=&quot;${listMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String confirmDecrypt=AESUtil.decrypt(confirmContent,key1,iv1);
+vars.put(&quot;confirmContent&quot;,confirmContent);
+vars.put(&quot;confirmDecrypt&quot;,confirmDecrypt);
+log.info(&quot;confirmContent=&quot;+confirmContent);
+log.info(&quot;confirmDecrypt=&quot;+confirmDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="订单状态检查数据请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+String checkOrderStatusContent=&quot;{\&quot;checkPoint\&quot;: 0,\&quot;driverAccount\&quot;: \&quot;N202003131102\&quot;,\&quot;orderId\&quot;: \&quot;\&quot;,\&quot;userAccount\&quot;: \&quot;022\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String checkOrderStatusEncrypt=AESUtil.encrypt(checkOrderStatusContent,key1,iv1);
+vars.put(&quot;checkOrderStatusEncrypt&quot;,checkOrderStatusEncrypt);
+log.info(&quot;checkOrderStatusEncrypt=&quot;+checkOrderStatusEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="订单状态检查查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${checkOrderStatusEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/checkOrderStatus</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="订单状态检查-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">checkOrderStatusMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="订单状态检查-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+String checkOrderStatusContent=&quot;${checkOrderStatusMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String checkOrderStatusDecrypt=AESUtil.decrypt(checkOrderStatusContent,key1,iv1);
+vars.put(&quot;checkOrderStatusContent&quot;,checkOrderStatusContent);
+vars.put(&quot;checkOrderStatusDecrypt&quot;,checkOrderStatusDecrypt);
+log.info(&quot;checkOrderStatusContent=&quot;+checkOrderStatusContent);
+log.info(&quot;checkOrderStatusDecrypt=&quot;+checkOrderStatusDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="代接订单列表数据请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String waitAcceptOrdersContent=&quot;{\&quot;agentStatus\&quot;: \&quot;\&quot;,\&quot;appointmentTimeEnd\&quot;: \&quot;\&quot;,\&quot;appointmentTimeStar\&quot;: \&quot;\&quot;,	\&quot;current\&quot;: 0,\&quot;orderId\&quot;: [],\&quot;orderType\&quot;: \&quot;\&quot;,\&quot;pageSize\&quot;: 0,\&quot;userAccount\&quot;: \&quot;N02020070929\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String waitAcceptOrdersEncrypt=AESUtil.encrypt(waitAcceptOrdersContent,key1,iv1);
+vars.put(&quot;waitAcceptOrdersEncrypt&quot;,waitAcceptOrdersEncrypt);
+log.info(&quot;waitAcceptOrdersEncrypt=&quot;+waitAcceptOrdersEncrypt);
+
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="代接订单列表数据查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${waitAcceptOrdersEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/waitAcceptOrders</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="代接订单列表-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">waitAcceptOrdersMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="代接订单列表数据-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String waitAcceptOrdersContent=&quot;${waitAcceptOrdersMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String waitAcceptOrdersDecrypt=AESUtil.decrypt(waitAcceptOrdersContent,key1,iv1);
+vars.put(&quot;waitAcceptOrdersContent&quot;,waitAcceptOrdersContent);
+vars.put(&quot;waitAcceptOrdersDecrypt&quot;,waitAcceptOrdersDecrypt);
+log.info(&quot;waitAcceptOrdersContent=&quot;+waitAcceptOrdersContent);
+log.info(&quot;waitAcceptOrdersDecrypt=&quot;+waitAcceptOrdersDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="待处理订单列表数据请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String waitHandleOrdersContent=&quot;{\&quot;agentStatus\&quot;: \&quot;\&quot;,\&quot;appointmentTimeEnd\&quot;: \&quot;\&quot;,	\&quot;appointmentTimeStar\&quot;: \&quot;\&quot;,\&quot;current\&quot;: 0,\&quot;orderId\&quot;: [],\&quot;orderType\&quot;: \&quot;\&quot;,\&quot;pageSize\&quot;: 0,\&quot;userAccount\&quot;: \&quot;N202003121079\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String waitHandleOrdersEncrypt=AESUtil.encrypt(waitHandleOrdersContent,key1,iv1);
+vars.put(&quot;waitHandleOrdersEncrypt&quot;,waitHandleOrdersEncrypt);
+log.info(&quot;waitHandleOrdersEncrypt=&quot;+waitHandleOrdersEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="待处理订单列表查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${waitHandleOrdersEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/waitHandleOrders</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="待处理订单列表-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">waitHandleOrdersMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="待处理订单-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String waitHandleOrdersContent=&quot;${waitHandleOrdersMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String waitHandleOrdersDecrypt=AESUtil.decrypt(waitHandleOrdersContent,key1,iv1);
+vars.put(&quot;waitHandleOrdersContent&quot;,waitHandleOrdersContent);
+vars.put(&quot;waitHandleOrdersDecrypt&quot;,waitHandleOrdersDecrypt);
+log.info(&quot;waitHandleOrdersContent=&quot;+waitHandleOrdersContent);
+log.info(&quot;waitHandleOrdersDecrypt=&quot;+waitHandleOrdersDecrypt);</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="首部信息请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String getTopDataContent=&quot;{\&quot;name\&quot;: \&quot;\&quot;,\&quot;userAccount\&quot;: \&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String getTopDataEncrypt=AESUtil.encrypt(getTopDataContent,key1,iv1);
+vars.put(&quot;getTopDataEncrypt&quot;,getTopDataEncrypt);
+log.info(&quot;getTopDataEncrypt=&quot;+getTopDataEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="首部信息查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${getTopDataDecrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/getTopData</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="首部信息-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">getTopDataMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="首部信息-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String getTopDataContent=&quot;${getTopDataMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String getTopDataDecrypt=AESUtil.decrypt(getTopDataContent,key1,iv1);
+vars.put(&quot;getTopDataContent&quot;,getTopDataContent);
+vars.put(&quot;getTopDataDecrypt&quot;,getTopDataDecrypt);
+log.info(&quot;getTopDataContent=&quot;+getTopDataContent);
+log.info(&quot;getTopDataDecrypt=&quot;+getTopDataDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="订单详情请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String getOrderInfoContent=&quot;{	\&quot;agentStatus\&quot;: \&quot;\&quot;,\&quot;orderId\&quot;: \&quot;MD20200709000002558\&quot;,\&quot;orderType\&quot;: \&quot;\&quot;,\&quot;userAccount\&quot;: \&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String getOrderInfoEncrypt=AESUtil.encrypt(getOrderInfoContent,key1,iv1);
+vars.put(&quot;getOrderInfoEncrypt&quot;,getOrderInfoEncrypt);
+log.info(&quot;getOrderInfoEncrypt=&quot;+getOrderInfoEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="订单详情查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${getOrderInfoDecrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/work/getOrderInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="订单详情查询-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">getOrderInfoMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="订单详情-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String getOrderInfoContent=&quot;${getOrderInfoMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String getOrderInfoDecrypt=AESUtil.decrypt(getOrderInfoContent,key1,iv1);
+vars.put(&quot;getOrderInfoContent&quot;,getOrderInfoContent);
+vars.put(&quot;getOrderInfoDecrypt&quot;,getOrderInfoDecrypt);
+log.info(&quot;getOrderInfoContent=&quot;+getOrderInfoContent);
+log.info(&quot;getOrderInfoDecrypt=&quot;+getOrderInfoDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="司机车辆信息录入请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+String saveVehicleInfoContent=&quot;{\&quot;nickName\&quot;: \&quot;\&quot;,\&quot;orderId\&quot;: \&quot;\&quot;,	\&quot;vehicleInfoList\&quot;: [{\&quot;brandId\&quot;: \&quot;\&quot;,\&quot;brandName\&quot;: \&quot;\&quot;,\&quot;colour\&quot;: \&quot;\&quot;,\&quot;detailId\&quot;: \&quot;\&quot;,\&quot;detailName\&quot;: \&quot;\&quot;,\&quot;id\&quot;: 0,\&quot;licenceNo\&quot;: \&quot;\&quot;,\&quot;mileage\&quot;: 0,\&quot;remarks\&quot;: \&quot;\&quot;,	\&quot;seriesId\&quot;: \&quot;\&quot;,	\&quot;seriesName\&quot;: \&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String saveVehicleInfoEncrypt=AESUtil.encrypt(saveVehicleInfoContent,key1,iv1);
+vars.put(&quot;saveVehicleInfoEncrypt&quot;,saveVehicleInfoEncrypt);
+log.info(&quot;saveVehicleInfoEncrypt=&quot;+saveVehicleInfoEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="司机车辆信息录入查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${saveVehicleInfoEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/confirm/saveVehicleInfo</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="司机车辆信息-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">saveVehicleInfoMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="司机车辆录入查询-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String saveVehicleInfoContent=&quot;${saveVehicleInfoMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String saveVehicleInfoDecrypt=AESUtil.decrypt(saveVehicleInfoContent,key1,iv1);
+vars.put(&quot;saveVehicleInfoContent&quot;,saveVehicleInfoContent);
+vars.put(&quot;saveVehicleInfoDecrypt&quot;,saveVehicleInfoDecrypt);
+log.info(&quot;saveVehicleInfoContent=&quot;+saveVehicleInfoContent);
+log.info(&quot;saveVehicleInfoDecrypt=&quot;+saveVehicleInfoDecrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="核券请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String writeOffContent=&quot;{\&quot;carLifeOrderId\&quot;: \&quot;MD20200709000005166-01\&quot;,\&quot;couponNo\&quot;: \&quot;\&quot;,	\&quot;orderId\&quot;: \&quot;\&quot;,\&quot;storeAccount\&quot;: \&quot;\&quot;,\&quot;userAccount\&quot;: \&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String writeOffEncrypt=AESUtil.encrypt(writeOffContent,key1,iv1);
+vars.put(&quot;writeOffEncrypt&quot;,writeOffEncrypt);
+log.info(&quot;writeOffEncrypt=&quot;+writeOffEncrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="核券检查查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${writeOffEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/coupon/writeOff</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="核券响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">writeOffMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="核券-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String writeOffContent=&quot;${writeOffMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String writeOffDecrypt=AESUtil.decrypt(writeOffContent,key1,iv1);
+vars.put(&quot;writeOffContent&quot;,writeOffContent);
+vars.put(&quot;writeOffDecrypt&quot;,writeOffDecrypt);
+log.info(&quot;writeOffContent=&quot;+writeOffContent);
+log.info(&quot;writeOffDecrypt=&quot;+writeOffDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="提交上传请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String uploadContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200319000001334\&quot;,\&quot;urlList&quot;:[]}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String uploadEncrypt=AESUtil.encrypt(uploadContent,key1,iv1);
+vars.put(&quot;uploadEncrypt&quot;,uploadEncrypt);
+log.info(&quot;uploadEncrypt=&quot;+uploadEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交上传查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${uploadDecrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/picture/upload</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="提交上传-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">uploadMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="提交上传-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String uploadContent=&quot;${uploadMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String uploadDecrypt=AESUtil.decrypt(uploadContent,key1,iv1);
+vars.put(&quot;uploadContent&quot;,uploadContent);
+vars.put(&quot;uploadDecrypt&quot;,uploadDecrypt);
+log.info(&quot;uploadContent=&quot;+uploadContent);
+log.info(&quot;uploadDecrypt=&quot;+uploadDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="查询服务列表请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String listContent=&quot;{\&quot;orderId\&quot;:\&quot;\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String listEncrypt=AESUtil.encrypt(listContent,key1,iv1);
+vars.put(&quot;listEncrypt&quot;,listEncrypt);
+log.info(&quot;listEncrypt=&quot;+listEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询服务列表查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${listDecrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/service/item/list</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="查询服务列表-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">listMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="查询服务列表-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String listContent=&quot;${listMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String listDecrypt=AESUtil.decrypt(listContent,key1,iv1);
+vars.put(&quot;listContent&quot;,listContent);
+vars.put(&quot;listDecrypt&quot;,listDecrypt);
+log.info(&quot;listContent=&quot;+listContent);
+log.info(&quot;listDecrypt=&quot;+listDecrypt);
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="预计费用请求加密" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String estimateCostContent=&quot;{\&quot;orderId\&quot;:\&quot;MD20200709000005166\&quot;}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String estimateCostEncrypt=AESUtil.encrypt(estimateCostContent,key1,iv1);
+vars.put(&quot;estimateCostEncrypt&quot;,estimateCostEncrypt);
+log.info(&quot;estimateCostEncrypt=&quot;+estimateCostEncrypt);
+
+
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="预计费用查询" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">${estimateCostEncrypt}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/app/driver/order/status/charge/estimateCost</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="预计费用-响应结果" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">estimateCostMsg</stringProp>
+            <stringProp name="RegexExtractor.regex">&quot;(.*)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">null</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="预计费用查询-响应解密-Shell" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.midai.AESUtil;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+String estimateCostContent=&quot;${estimateCostMsg}&quot;;
+String key1=&quot;2b9c9365c1fc9828&quot;;
+String iv1=&quot;46c1be2f927b969b&quot;;
+String estimateCostDecrypt=AESUtil.decrypt(estimateCostContent,key1,iv1);
+vars.put(&quot;estimateCostContent&quot;,estimateCostContent);
+vars.put(&quot;estimateCostDecrypt&quot;,estimateCostDecrypt);
+log.info(&quot;estimateCostContent=&quot;+estimateCostContent);
+log.info(&quot;estimateCostDecrypt=&quot;+estimateCostDecrypt);
+</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

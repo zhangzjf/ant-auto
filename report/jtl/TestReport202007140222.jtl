@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="1185" it="0" lt="0" ct="0" ts="1594707754227" s="false" lb="登录加密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; String key1=&quot;2b9c9365c1fc9828&quot;; String iv1=&quot;46c1be2f92 . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="APP-米袋出行 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+
+<sample t="945" it="0" lt="0" ct="0" ts="1594707760926" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="794" it="0" lt="793" ct="432" ts="1594707762059" s="true" lb="登录请求" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="1750" sby="515" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="100" it="0" lt="0" ct="0" ts="1594707762867" s="true" lb="响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="8" it="0" lt="0" ct="0" ts="1594707762988" s="true" lb="司机接单操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="68" it="0" lt="68" ct="0" ts="1594707762998" s="true" lb="司机接单操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="708" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/acceptOrder</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1594707763067" s="true" lb="司机接单操作响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763074" s="true" lb="忽略订单操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="52" it="0" lt="52" ct="0" ts="1594707763077" s="true" lb="忽略接单操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="881" sby="708" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/ignoreOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707763132" s="true" lb="忽略接单操作响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707763136" s="true" lb="上线听单/结束听单操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="64" it="0" lt="64" ct="0" ts="1594707763140" s="true" lb="上线听单/结束听单操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="857" sby="778" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/setUpOnlineStatus</java.net.URL>
+</httpSample>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707763206" s="true" lb="上线听单/结束听单响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707763217" s="true" lb="我已就位操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="54" it="0" lt="54" ct="0" ts="1594707763224" s="true" lb="我已就位操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="667" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/inPlace</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707763283" s="true" lb="我已就位响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707763288" s="true" lb="开始服务操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="57" it="0" lt="57" ct="0" ts="1594707763294" s="true" lb="开始服务操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="691" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/serving</java.net.URL>
+</httpSample>
+<sample t="21" it="0" lt="0" ct="0" ts="1594707763352" s="true" lb="开始服务响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="11" it="0" lt="0" ct="0" ts="1594707763374" s="true" lb="到达还车地点操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="54" it="0" lt="54" ct="0" ts="1594707763386" s="true" lb="到达还车地点操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="673" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/inReturnPlace</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707763440" s="true" lb="到达还车地点响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707763446" s="true" lb="完成服务操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="36" it="0" lt="36" ct="0" ts="1594707763453" s="true" lb="完成服务操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="753" sby="733" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/complete</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707763490" s="true" lb="完成服务响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707763494" s="true" lb="确认费用操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="56" it="0" lt="56" ct="0" ts="1594707763496" s="true" lb="确认费用操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="674" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/charge/confirm</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763554" s="true" lb="确认费用响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763556" s="true" lb="费用明细操作-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="58" it="0" lt="58" ct="0" ts="1594707763558" s="true" lb="费用明细操作" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="729" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/chargeDetail</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763617" s="true" lb="费用明细响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707763619" s="true" lb="个人中心-基础月工作数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707763622" s="true" lb="个人中心-基础月工作数据" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="608" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/info/month</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707763654" s="false" lb="个人中心-基础月工作数据-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707763659" s="true" lb="个人中心-订单条件请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="73" it="0" lt="73" ct="0" ts="1594707763661" s="true" lb="个人中心-订单条件" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="10715" sby="810" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/list</java.net.URL>
+</httpSample>
+<sample t="16" it="0" lt="0" ct="0" ts="1594707763735" s="true" lb="个人中心-订单条件-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707763752" s="true" lb="个人中心-作业规范查询数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="43" it="0" lt="43" ct="0" ts="1594707763755" s="true" lb="个人中心-作业规范查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="1099" sby="818" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/specification/list</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763799" s="false" lb="个人中心作业规范-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;In file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; Encountered &quot;:&quot; at line 5, column 29.&#xd;&#xa;" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763802" s="true" lb="订单状态检查数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="38" it="0" lt="38" ct="0" ts="1594707763805" s="true" lb="订单状态检查查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="857" sby="733" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/checkOrderStatus</java.net.URL>
+</httpSample>
+<sample t="11" it="0" lt="0" ct="0" ts="1594707763844" s="true" lb="订单状态检查-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707763855" s="true" lb="代接订单列表数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="55" it="0" lt="55" ct="0" ts="1594707763861" s="true" lb="代接订单列表数据查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="881" sby="821" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/waitAcceptOrders</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707763918" s="true" lb="代接订单列表数据-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763921" s="true" lb="待处理订单列表数据请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="50" it="0" lt="49" ct="0" ts="1594707763924" s="true" lb="待处理订单列表查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="3058" sby="821" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/waitHandleOrders</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707763974" s="true" lb="待处理订单-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="14" it="0" lt="0" ct="0" ts="1594707763977" s="true" lb="首部信息请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707763992" s="true" lb="首部信息查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="618" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/getTopData</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707764024" s="false" lb="首部信息-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707764029" s="true" lb="订单详情请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707764035" s="true" lb="订单详情查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="622" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/work/getOrderInfo</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707764070" s="false" lb="订单详情-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707764073" s="true" lb="司机车辆信息录入请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="130" it="0" lt="130" ct="0" ts="1594707764078" s="true" lb="司机车辆信息录入查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="857" sby="913" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/confirm/saveVehicleInfo</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707764209" s="true" lb="司机车辆录入查询-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707764210" s="true" lb="核券请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="90" it="0" lt="90" ct="38" ts="1594707764212" s="true" lb="核券检查查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="901" sby="757" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/coupon/writeOff</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707764302" s="true" lb="核券-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707764304" s="false" lb="提交上传请求加密" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;In file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; Encountered &quot;:&quot; at line 5, column 70.&#xd;&#xa;" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707764306" s="true" lb="提交上传查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="619" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/picture/upload</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707764338" s="false" lb="提交上传-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707764341" s="true" lb="查询服务列表请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="33" it="0" lt="33" ct="0" ts="1594707764348" s="true" lb="查询服务列表查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="717" sby="8088" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/service/item/list</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707764385" s="false" lb="查询服务列表-响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707764387" s="true" lb="预计费用请求加密" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="154" it="0" lt="154" ct="0" ts="1594707764390" s="true" lb="预计费用查询" rc="200" rm="" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="945" sby="679" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/driver/order/status/charge/estimateCost</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707764545" s="true" lb="预计费用查询-响应解密-Shell" rc="200" rm="OK" tn="米袋出行2.0司机端服务接口权限测试 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+
+<httpSample t="1760" it="0" lt="1759" ct="1729" ts="1594707768978" s="true" lb="HTTP请求" rc="200" rm="" tn="线程组 1-1" dt="text" by="388" sby="162" ng="1" na="1">
+  <java.net.URL>https://www.ratjin.com/rat/user/login?phone=15736928516&amp;code=123456</java.net.URL>
+</httpSample>
+
+<sample t="1531" it="0" lt="0" ct="0" ts="1594707776289" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="632" it="0" lt="631" ct="319" ts="1594707777968" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="917" sby="493" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="26" it="0" lt="0" ct="0" ts="1594707778607" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707778636" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707778640" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707778672" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707778677" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="331" it="0" lt="331" ct="43" ts="1594707778683" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707779016" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707779021" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="30" it="0" lt="30" ct="0" ts="1594707779023" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707779054" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707779056" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="326" it="0" lt="326" ct="40" ts="1594707779060" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1594707779388" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707779397" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="37" it="0" lt="37" ct="0" ts="1594707779400" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707779440" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707779443" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="659" it="0" lt="659" ct="42" ts="1594707779450" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="857" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780111" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707780115" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="29" it="0" lt="29" ct="0" ts="1594707780117" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780149" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780152" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="326" it="0" lt="325" ct="40" ts="1594707780156" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="945" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707780482" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780486" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="39" it="0" lt="38" ct="0" ts="1594707780488" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780529" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707780532" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="78" it="0" lt="77" ct="37" ts="1594707780539" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="13" it="0" lt="0" ct="0" ts="1594707780617" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707780631" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="30" it="0" lt="30" ct="0" ts="1594707780637" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707780668" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707780669" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="79" it="0" lt="78" ct="36" ts="1594707780673" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707780752" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707780758" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="37" it="0" lt="36" ct="0" ts="1594707780762" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780799" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780802" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="77" it="0" lt="76" ct="36" ts="1594707780806" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707780899" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707780906" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="34" it="0" lt="34" ct="0" ts="1594707780912" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707780949" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707780951" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="69" it="0" lt="69" ct="28" ts="1594707780953" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781022" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781024" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="29" it="0" lt="29" ct="0" ts="1594707781026" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781056" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781057" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="73" it="0" lt="73" ct="34" ts="1594707781060" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781134" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781136" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707781139" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781174" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707781176" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="35" ts="1594707781183" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781258" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707781260" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707781266" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707781299" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781303" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="93" it="0" lt="93" ct="37" ts="1594707781305" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781399" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781401" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707781404" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781436" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781437" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="77" it="0" lt="77" ct="35" ts="1594707781440" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781518" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781521" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="36" it="0" lt="36" ct="0" ts="1594707781523" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781560" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707781561" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="71" it="0" lt="71" ct="33" ts="1594707781566" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781637" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781640" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707781641" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781673" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707781674" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="91" it="0" lt="91" ct="33" ts="1594707781679" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781770" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781774" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="33" it="0" lt="33" ct="0" ts="1594707781776" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781809" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781811" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="35" ts="1594707781813" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707781888" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781892" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="30" it="0" lt="30" ct="0" ts="1594707781893" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707781923" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707781925" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="92" it="0" lt="92" ct="35" ts="1594707781927" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782019" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707782021" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707782025" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782059" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707782062" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="71" it="0" lt="71" ct="33" ts="1594707782068" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1594707782141" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782148" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="44" it="0" lt="43" ct="0" ts="1594707782150" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782194" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="5" it="0" lt="0" ct="0" ts="1594707782195" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="79" it="0" lt="79" ct="36" ts="1594707782202" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707782283" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782287" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707782289" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707782321" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782325" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="84" it="0" lt="84" ct="35" ts="1594707782327" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782412" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707782414" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="34" ct="0" ts="1594707782418" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782453" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782454" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="81" it="0" lt="81" ct="35" ts="1594707782456" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782538" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782540" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="34" it="0" lt="34" ct="0" ts="1594707782543" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782579" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782582" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="137" it="0" lt="137" ct="33" ts="1594707782584" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782722" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782723" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="34" it="0" lt="34" ct="0" ts="1594707782726" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782760" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782761" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="76" it="0" lt="76" ct="36" ts="1594707782764" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782840" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707782842" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="29" it="0" lt="29" ct="0" ts="1594707782844" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782873" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782874" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="95" it="0" lt="95" ct="35" ts="1594707782876" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782972" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707782974" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707782975" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783010" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707783012" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="70" it="0" lt="70" ct="32" ts="1594707783016" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="6" it="0" lt="0" ct="0" ts="1594707783086" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707783102" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707783106" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783139" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783140" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="79" it="0" lt="79" ct="34" ts="1594707783142" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783222" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783224" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="29" it="0" lt="29" ct="0" ts="1594707783225" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783255" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783256" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="76" it="0" lt="76" ct="35" ts="1594707783258" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783335" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783336" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707783337" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707783372" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707783374" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="73" it="0" lt="73" ct="34" ts="1594707783379" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707783453" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783455" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707783457" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783488" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707783489" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="75" it="0" lt="75" ct="34" ts="1594707783492" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707783568" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783571" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="29" it="0" lt="29" ct="0" ts="1594707783572" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783601" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783603" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="77" it="0" lt="77" ct="36" ts="1594707783604" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1594707783681" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783689" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="33" it="0" lt="33" ct="0" ts="1594707783690" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783724" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783725" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="78" it="0" lt="78" ct="34" ts="1594707783727" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707783805" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783807" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707783809" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783841" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783842" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="67" it="0" lt="67" ct="28" ts="1594707783844" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783911" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783913" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="27" it="0" lt="27" ct="0" ts="1594707783915" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="7" it="0" lt="0" ct="0" ts="1594707783942" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707783954" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="86" it="0" lt="86" ct="38" ts="1594707783958" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="13" it="0" lt="0" ct="0" ts="1594707784045" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784059" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707784060" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784096" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784098" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="71" it="0" lt="71" ct="31" ts="1594707784100" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784171" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707784173" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707784174" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707784210" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707784211" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="29" ts="1594707784212" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707784287" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784289" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707784291" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784323" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784324" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="77" it="0" lt="77" ct="35" ts="1594707784326" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784404" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784405" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="30" it="0" lt="30" ct="0" ts="1594707784406" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784436" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784437" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="35" ts="1594707784438" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707784512" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784515" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="33" it="0" lt="33" ct="0" ts="1594707784516" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784549" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707784551" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="70" it="0" lt="70" ct="31" ts="1594707784552" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707784622" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784624" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="28" it="0" lt="28" ct="0" ts="1594707784625" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784653" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784654" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="284" it="0" lt="284" ct="246" ts="1594707784656" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784941" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784942" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="30" it="0" lt="30" ct="0" ts="1594707784944" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784974" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707784975" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="35" ts="1594707784977" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785052" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785054" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="36" it="0" lt="36" ct="0" ts="1594707785055" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785091" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785092" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="71" it="0" lt="71" ct="32" ts="1594707785094" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785165" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785168" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="28" it="0" lt="28" ct="0" ts="1594707785170" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785199" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785200" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="68" it="0" lt="68" ct="29" ts="1594707785202" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785271" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707785273" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="32" it="0" lt="32" ct="0" ts="1594707785274" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785306" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785307" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="78" it="0" lt="78" ct="36" ts="1594707785310" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785388" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785390" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="37" it="0" lt="37" ct="0" ts="1594707785391" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785429" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785430" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="74" it="0" lt="74" ct="32" ts="1594707785433" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785508" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785509" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="28" it="0" lt="28" ct="0" ts="1594707785511" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785539" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785540" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="73" it="0" lt="73" ct="29" ts="1594707785541" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785615" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785617" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="28" it="0" lt="28" ct="0" ts="1594707785619" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785647" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785649" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="154" it="0" lt="154" ct="30" ts="1594707785652" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785807" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785808" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="33" it="0" lt="33" ct="0" ts="1594707785810" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785843" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785845" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="98" it="0" lt="98" ct="46" ts="1594707785846" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707785944" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707785949" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="31" it="0" lt="31" ct="0" ts="1594707785950" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707785981" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707785983" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="71" it="0" lt="70" ct="33" ts="1594707785985" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786056" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="0" it="0" lt="0" ct="0" ts="1594707786058" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="28" it="0" lt="28" ct="0" ts="1594707786059" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786087" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786088" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="69" it="0" lt="69" ct="32" ts="1594707786090" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="2" it="0" lt="0" ct="0" ts="1594707786159" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786161" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="29" it="0" lt="29" ct="0" ts="1594707786162" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="3" it="0" lt="0" ct="0" ts="1594707786192" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786195" s="true" lb="登录加密-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="77" it="0" lt="77" ct="33" ts="1594707786197" s="true" lb="登录请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="921" sby="541" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/open/signin</java.net.URL>
+</httpSample>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786275" s="false" lb="响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation matcher.group" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<sample t="1" it="0" lt="0" ct="0" ts="1594707786276" s="true" lb="豪车订单下单-Shell" rc="200" rm="OK" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+<httpSample t="35" it="0" lt="35" ct="0" ts="1594707786277" s="true" lb="豪车订单下单请求" rc="200" rm="" tn="商务豪车提交订单接口 1-1" dt="text" by="855" sby="338" ng="1" na="1">
+  <java.net.URL>https://phantom-stg.golddishtech.com/api/app/luxuryCar/submitOrder</java.net.URL>
+</httpSample>
+<sample t="4" it="0" lt="0" ct="0" ts="1594707786313" s="false" lb="豪车订单下单响应解密-Shell" rc="500" rm="org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval&#x9;Sourced file: inline evaluation of: ``import com.midai.AESUtil; import java.util.regex.Matcher; import java.util.regex . . . &apos;&apos; : Typed variable declaration : Method Invocation AESUtil.decrypt" tn="商务豪车提交订单接口 1-1" dt="text" by="0" sby="0" ng="1" na="1"/>
+
+</testResults>
